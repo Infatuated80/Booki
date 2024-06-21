@@ -1,0 +1,531 @@
+:root {
+    --main-color: #0065FC;
+    --survol-bouton-color: #DEEBFF;
+    --main-bg-color: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+
+    /* Configuration de la variable pour la police de font */
+    --body-font: 'Raleway', sans-serif;
+}
+
+/* Généralisation */
+
+* {
+    font-family: var(--body-font);
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    font-family: var(--body-font);
+    font-size: 22px;
+    line-height: 25.83px;
+    font-weight: 700;
+    color: black;
+}
+
+h2 {
+    font-family: var(--body-font);
+    font-size: 18px;
+    line-height: 21.13px;
+    font-weight: 700;
+    color: black;
+}
+
+p {
+    margin: -3px 0 0 0;
+    font-family: var(--body-font);
+    font-size: 16px;
+    line-height: 18.78px;
+    font-weight: 400;
+    color: black;
+}
+
+/* Définit le comportement du formulaire pour la balise i contenant l'icône */
+
+.container-colonne form i {
+    width: 50px;
+    height: 49px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--main-bg-color);
+    color: black;
+    border-radius: 15px 0 0 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 14px 19px;
+    margin: 0 0 0 0;
+    vertical-align: middle; 
+}
+
+
+form {
+    margin: 30px 0 30px 0;
+}
+
+/* Définit le comportement du formulaire pour le input de type text */
+
+form input[type=text] {
+    width: 200px;
+    height: 47px;
+    padding: 0 0 0 0;
+    margin: 0 0 0 -4px;
+    font-family: var(--body-font);
+    font-size: 18px;
+    text-align: center;
+    font-family: var(--body-font);
+    font-weight: 700;
+    line-height: 21.13px;
+    color: black;
+    vertical-align: middle;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Définit le comportement du formulaire pour le input de type button */
+
+form input[type=submit] {
+    width: auto;
+    height: 49px;
+    margin: 0 0 0 -4px;
+    padding: 0 15px 0 15px;
+    vertical-align: middle;
+    color: white;
+    font-family: var(--body-font);
+    font-size: 18px;
+    border-radius: 0 15px 15px 0;
+    background-color: var(--main-color);
+    text-align: center;
+    font-size: 18px;
+    font-family: var(--body-font);
+    line-height: 21.13px;
+    font-weight: 700;
+    border: 0px solid;
+}
+
+/* La partie blanche */
+.fa-solid {
+    color: var(--main-color);
+}
+
+body {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 1440px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    display: flex;
+    width: 94%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 0 0 0;
+}
+
+main {
+    display: flex;
+    width: 94%;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0 200px 0;
+}
+
+header img {
+    width: 60px;
+    height: auto;
+    padding: 30px 0 30px 0px;
+    margin: 0;
+    gap: 10px;
+}
+
+header ul,
+li {
+    list-style-type: none;
+    display: inline;
+}
+
+header a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.78px;
+    text-decoration: none;
+    color: black;
+    padding: 0 50px 0 50px;
+    gap: 68px;
+}
+
+header a:hover {
+    text-decoration-line: underline;
+    text-underline-offset: -25px;
+    color: var(--main-color);
+}
+
+.container-colonne {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: left;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.container-ligne {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    justify-content: left;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.container-ligne i {
+    color: var(--main-color);
+    margin-right: 1rem;
+}
+
+.container-ligne button {
+    box-sizing: border-box;
+    width: auto;
+    height: 50px;
+    border-radius: 25px;
+    background-color: white;
+    font-family: var(--body-font);
+    font-size: 17px;
+    color: black;
+    padding: 0 20px 0 20px;
+    margin: -10px 30px 0 -20px;
+    text-align: center;
+    vertical-align: baseline;
+    line-height: 19.96px;
+    font-weight: 700;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.container-ligne button:hover {
+    background-color: var(--survol-bouton-color);
+}
+
+.container-ligne img {
+    padding: 0 10px 0 0;
+    vertical-align: middle;
+}
+
+.info {
+    margin: 20px 0 20px 0;
+}
+
+.info i {
+    color :var(--main-color);
+    margin-right: 1rem;
+    padding: 6px 11px 6px 11px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 100%;
+}
+
+.ajustement {
+    padding: 20px 0 0 12px;
+}
+
+/* Représente la carte blanche contenant les vignettes pour présenter les chambres d'hôtel */
+.card {
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    margin: auto;
+    padding: 3px 3px 3px 3px;
+}
+
+/* L'image s'adaptera à sa carte */
+.card img {
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Le titre de la carte. */
+.card-title {
+    font-family: var(--body-font);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 18.78px;
+}
+
+.card-txt {
+    padding: 0 0 0 10px;
+}
+
+.card-rating {
+    padding: 10px 0 0 10px;
+}
+
+/* La graisse de la police du symbole Euro */
+.euro {
+    font-weight: 700;
+}
+
+.neutral-star {
+    color: var(--main-bg-color)
+}
+
+/****** Hebergements et Populaires ***********/
+
+.hebergements-and-populaires {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.hebergements-and-populaires section {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/****** Hebergements ***********/
+
+/* la class hébergements prendra 65% de la taille du container */
+.hebergements{
+    width: 65%;
+}
+
+.hebergement-title {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 12px;
+    align-items: center;
+}
+
+.hebergement-cards img {
+    width: 250px;
+    height: 150px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.hebergement-cards {
+    width:33%;
+    height:auto;
+}
+
+.card-content-h {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 1.5px 0 0 0;
+}
+
+.hebergement-cards {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 150px;
+    padding-left: 5px;
+    justify-content: space-around;
+    box-sizing: border-box;
+    align-items: start;
+    margin: 32px 0 112px 0;
+    padding: 0 0 0 0;
+}
+
+.hebergement-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.hebergement-cards .card-subtitle {
+    margin: 0;
+}
+
+.hebergement-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+/****** Populaires ***********/
+
+/* La class 'populaires' prendra 32% de la taille du container. 65 + 32 = 97% ce qui laissera 3% pour permettre aux éléments de respirer(ne pas être collés). */
+.populaires {
+    width: 33%;
+}
+
+.populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.populaires-cards .card {
+    display: flex;
+    margin-top: 33px;
+}
+
+.populaires-cards img {
+    width: 33%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+
+.populaires-cards .card-content {
+    width: 60%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.card-content {
+    vertical-align: text-top;
+}
+
+.decalage {
+    margin: 30px 0 0 0;
+}
+
+
+.populaires-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.populaires-cards .card-subtitle {
+    margin: 0;
+}
+
+.populaires-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+/* La section des activités à Marseille */
+
+.section-activites-marseille {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    margin-top: 32px;
+}
+
+.activites-marseille {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.activites-marseille-title {
+    margin-left: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.activites-marseille-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 0 0 0 0;
+}
+
+.activites-marseille-cards img {
+    width: 250px;
+    height: 300px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.card-content-activites-marseille {
+    display: flex;
+    flex-direction: row;
+    padding: 1.6px 0 0 0;
+}
+
+.activites-marseille-cards {
+    display: flex;
+    flex-direction: row;
+    width: 94%;
+    height: 150px;
+    padding-left: 5px;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    align-items: start;
+    margin: auto;
+    margin-top: 32px;
+    padding: 0 0 0 0;
+}
+
+.activites-marseille-cards .card-title {
+    margin-top: 2px;
+    margin-bottom: 4px;
+}
+
+.activites-marseille-cards .card-subtitle {
+    margin: 0;
+}
+
+.activites-marseille-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+
+/* Le pied de page */
+footer {
+    width: 94%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-content: space-evenly;
+    margin: 0 0 0 0;
+    background-color: var(--main-bg-color);
+    padding: 8px 0 8px 0;
+}
+
+footer ul li {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 10px 0 0 0;
+    margin: 0 0 0 -20px;
+    white-space: nowrap;
+}
+
+footer h2 {
+    font-family: var(--body-font);
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.13px;
+    padding: 0 270px 0 20px;
+    white-space: nowrap;
+}
+
+
+
+
+
+
